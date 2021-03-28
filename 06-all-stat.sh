@@ -9,7 +9,7 @@ sqlite3 ./trades.sqlite3 > 04-all-stat.csv <<EO_SQL
 .mode csv
 
 SELECT
-	(SELECT price FROM trades WHERE ts_seg=a.ts_seg
+  (SELECT price FROM trades WHERE ts_seg=a.ts_seg
    ORDER BY timestamp ASC LIMIT 1) AS open
  ,(SELECT price FROM trades WHERE ts_seg=a.ts_seg
    ORDER BY timestamp DESC LIMIT 1) AS close
@@ -23,7 +23,7 @@ SELECT
  ,SUM(price * volume) / SUM(volume) AS wavg
  ,SUM(volume) as volume
 FROM trades a
-WHERE a.timestamp BETWEEN ${START} AND ${END}
+  WHERE a.timestamp BETWEEN ${START} AND ${END}
 GROUP BY a.ts_seg;
 EO_SQL
 
