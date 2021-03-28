@@ -1,6 +1,7 @@
 *.csv.gz
 *.csv
 *.sqlite3
+*.sqlite3-journal
 .*.swp
 timestamps.txt
 
