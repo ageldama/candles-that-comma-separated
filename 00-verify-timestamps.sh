@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cat korbitKRW.csv | cut -f1 -d , > timestamps.txt
+cat trades.csv | cut -f1 -d , > timestamps.txt
 
 echo -n "Total rows: "
 wc -l timestamps.txt

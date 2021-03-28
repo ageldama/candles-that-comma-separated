@@ -14,7 +14,7 @@ CREATE INDEX ix_trades_timestamp ON trades (timestamp);
 
 .separator ","
 .headers off
-.import korbitKRW.csv trades
+.import trades.csv trades
 
 
 EO_SQL
