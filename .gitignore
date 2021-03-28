@@ -1,0 +1,7 @@
+*.csv.gz
+*.csv
+*.sqlite3
+.*.swp
+timestamps.txt
+
+
